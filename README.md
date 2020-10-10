@@ -61,10 +61,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+    Can set up middleware to respond to HTTP requests, defines routing tables, and dynamically renders HTML pages based on arguments to templates. 
 1. Understand and explain the use of Middleware?
+    The use of Middleware is to expand the functionality of express.
 1. The basic principles of the REST architectural style.
+    REST is a client-server architecture. It is stateless which means communication between client and server always has the information to carry out requests. 
 1. Understand and explain the use of Express Routers.
+    Express routers help us to create route handlers, which handle many things like validation, errors, etc.
 1. Describe tooling used to manually test the correctness of an API.
+    The tool I am familiar with, Insomnia, allows for the creation of manually tested requests to run a server through the gambit of CRUD operations. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -72,12 +77,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [ x] Create a forked copy of this project
+- [ x] Add your team lead as collaborator on Github
+- [ x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [ x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
@@ -85,20 +90,20 @@ Your finished project must include all of the following requirements:
 
 #### NPM Scripts
 
-- [ ] An _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Use _nodemon_ as a development time dependency only that is not deployed to production.
-- [ ] An _npm script_ named _"start"_ that uses `node` to run the API server.
+- [ x] An _npm script_ named _"server"_ that uses `nodemon`to run the API server.
+- [ x] Use _nodemon_ as a development time dependency only that is not deployed to production.
+- [ x] An _npm script_ named _"start"_ that uses `node` to run the API server.
 
 #### Build an API
 
-- [ ] Design and build endpoints for performing CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- [ ] Add an endpoint for retrieving the list of actions for a project.
-- [ ] Use an HTTP client like `postman` or `insomnia` to test the API's endpoints.
-- [ ] Use Express Routers to organize the API's code.
+- [ x] Design and build endpoints for performing CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+- [ x] Add an endpoint for retrieving the list of actions for a project.
+- [ x] Use an HTTP client like `postman` or `insomnia` to test the API's endpoints.
+- [ x] Use Express Routers to organize the API's code.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
-### Task 3: Stretch Goals
+### Task 3: STRETCH GOALS
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
