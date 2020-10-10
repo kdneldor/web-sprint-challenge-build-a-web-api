@@ -2,11 +2,11 @@ const express = require("express");
 const actions = require("../data/helpers/actionModel");
 const router = express.Router();
 
-router.get("/actions", (req, res) => {
+router.get("/projects/:id/actions/:id", (req, res) => {
   actions
-    .get(req.query)
-    .then((actions) => {
-      res.status(200).json(actions);
+    .get(req.params.id)
+    .then((action) => {
+      res.status(200).json(action);
     })
     .catch((error) => {
       console.log(error);
@@ -16,7 +16,7 @@ router.get("/actions", (req, res) => {
     });
 });
 
-router.post("/actions", (req, res) => {
+router.post("/projects/:id/actions", (req, res) => {
   if (!req.body.project_id || !req.body.description || !req.body.notes) {
     return res.status(400).json({
       errorMessage: "Please provide id, description, and notes for the action.",
@@ -36,7 +36,7 @@ router.post("/actions", (req, res) => {
     });
 });
 
-router.put("/actions/:id", (req, res) => {
+router.put("/projects/:id/actions/:id", (req, res) => {
   if (!req.body.project_id || !req.body.description || !req.body.notes) {
     return res.status(400).json({
       errorMessage: "Please provide id, description, and notes for the action.",
@@ -62,24 +62,26 @@ router.put("/actions/:id", (req, res) => {
     });
 });
 
-router.delete("/actions/:id", (req, res) => {
-    actions
-      .remove(req.params.id)
-      .then((count) => {
-        if (count > 0) {
-          res.status(200).json({
-            message: "Action was deleted.",
-          });
-        } else {
-          res.status(404).json({
-            message: "The action with the specified ID does not exist.",
-          });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        res.status(500).json({
-          error: "The action could not be removed.",
+router.delete("/projects/:id/actions/:id", (req, res) => {
+  actions
+    .remove(req.params.id)
+    .then((count) => {
+      if (count > 0) {
+        res.status(200).json({
+          message: "Action was deleted.",
         });
+      } else {
+        res.status(404).json({
+          message: "The action with the specified ID does not exist.",
+        });
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(500).json({
+        error: "The action could not be removed.",
       });
-  });
+    });
+});
+
+module.exports = router;
