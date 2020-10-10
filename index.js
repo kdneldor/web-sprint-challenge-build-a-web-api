@@ -1,3 +1,35 @@
+const express = require('express')
+const server = express()
+
+server.use(express.json())
+
+server.listen(9000, () => {
+    console.log(`Server running at http://localhost:9000`)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
