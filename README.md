@@ -27,7 +27,7 @@ The description of the structure and extra information about each _resource_ sto
 | description | string    | required.                                                                   |
 | completed   | boolean   | used to indicate if the project has been completed, not required            |
 
-#### Actions
+#### ACTIONS
 
 | Field       | Data Type | Metadata                                                                                         |
 | ----------- | --------- | ------------------------------------------------------------------------------------------------ |
